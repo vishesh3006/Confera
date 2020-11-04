@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <nav class="navbar sticky-top bg-light navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="/">Confera</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SignUp
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/signupAttendee">Attendee</a>
+                    <a class="dropdown-item" href="/signupReviewer">Reviewer</a>
+                    <a class="dropdown-item" href="/signupReviewee">Reviewee</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+    <form class="form-signin" action="/login" method="POST" required>
+        <div class="text-center mb-4">
+          <h1 class="h3 mb-3 font-weight-normal">Login</h1> 
+        </div>
+  
+        <div class="form-label-group">
+          <input type="email" name="emailId" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          <label for="inputEmail">Email address</label>
+        </div>
+  
+        <div class="form-label-group">
+          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <label for="inputPassword">Password</label>
+        </div>
+
+        <div class="form-label-group mb-3">
+            <select name="loginAs" required class="custom-select" id="inputGroupSelect01">
+                <option value="attendee" selected>Attendee</option>
+                <option value="reviewee">Reviewee</option>
+                <option value="reviewer">Reviewer</option>
+            </select>
+        </div>
+  
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <input class="btn btn-lg btn-primary btn-block" type="submit">
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
+    </form>
+    <!-- <h1>Login</h1>
+    <form action="/login" method="POST" required>
+        <input type="text" name="emailId" placeholder="emailId" required> <br>
+        <input type="password" name="password" placeholder="pass" required>
+        <select name="loginAs" required>
+            <option value="attendee">Attendee</option>
+            <option value="reviewee">Reviewee</option>
+            <option value="reviewer">Reviewer</option>
+        </select>
+        <input type="submit">
+    </form> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
